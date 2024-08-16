@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragmnet">
+
+
+    <fragment
+        android:id="@+id/first_fragmnet"
+        android:name="com.example.navigationcommponent.firstFragment"
+        android:label="firstfragmnet"
+        tools:layout="@layout/fragment_1">
+        <action
+            android:id="@+id/action_first_fragmnet_to_Second_fragmnet"
+            app:destination="@id/Second_fragmnet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Second_fragmnet"
+        android:name="com.example.navigationcommponent.secondFragment"
+        android:label="SecondFragmnet"
+        tools:layout="@layout/fragment_2">
+        <argument
+            android:name="sfinput"
+            app:argType="com.example.navigationcommponent.SecondfragmentInput" />
+        <action
+            android:id="@+id/action_Second_fragmnet_to_third_fragment"
+            app:destination="@id/third_fragment"/>
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_fragment"
+        android:name="com.example.navigationcommponent.ThirdFragment"
+        android:label="thirdFragment"
+        tools:layout="@layout/fragment_third">
+
+
+        <argument
+            android:name="sfinput"
+            app:argType="com.example.navigationcommponent.SecondfragmentInput" />
+    </fragment>
+
+
+</navigation>
